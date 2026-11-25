@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirect www to canonical non-www HTTPS URL
+RewriteCond %{HTTP_HOST} ^www\.yuvashakti\.blog$ [NC]
+RewriteRule ^(.*)$ https://yuvashakti.blog/$1 [R=301,L]
