@@ -264,7 +264,7 @@
 
           <div class="lg:col-span-5">
             <div class="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-indigo-900/40">
-              <img src="assets/hero-scheme.jpg" width="800" height="446" fetchpriority="high" decoding="async" alt="পশ্চিমবঙ্গের যুবক-যুবতীরা লাইব্রেরিতে চাকরির পরীক্ষা ও স্কিল ডেভেলপমেন্টের প্রস্তুতি নিচ্ছেন" class="w-full h-auto object-cover aspect-video" />
+              <img src="assets/hero-scheme.jpg" width="800" height="450" fetchpriority="high" decoding="async" alt="পশ্চিমবঙ্গের যুবক-যুবতীরা চাকরির পরীক্ষা ও স্কিল ডেভেলপমেন্টের প্রস্তুতি নিচ্ছেন" class="w-full h-auto object-cover aspect-video" />
               <div class="bg-slate-950/85 backdrop-blur px-4 py-3 flex items-center justify-between text-xs border-t border-white/10 gap-2">
                 <span id="heroImgCap" class="text-slate-300">অবস্থা: সরকারি বিজ্ঞপ্তি ও ক্যাম্পের সূচি প্রতীক্ষিত</span>
                 <span id="heroImgDbt" class="text-amber-300 font-semibold shrink-0">DBT • প্রতি মাসের ২য় সপ্তাহ</span>
@@ -341,17 +341,10 @@
     <!-- Dedicated Video Updates Section -->
     <section id="videos" class="bg-slate-900 text-white py-10 sm:py-12">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
-          <div>
-            <span id="videoEyebrow" class="text-xs font-bold uppercase tracking-wider text-amber-400">ভিডিও গ্যালারি ও এক্সপ্লেনার</span>
-            <h2 id="videoTitle" class="text-2xl sm:text-3xl font-extrabold mt-1">যুবশক্তি প্রকল্পের ভিডিও আপডেট ও বিশ্লেষণ</h2>
-            <p id="videoDesc" class="text-sm text-slate-300 mt-1">সহজ ভাষায় ভিডিও দেখুন অথবা নিজের পছন্দের YouTube ভিডিও লিঙ্ক যোগ করে প্লে করুন।</p>
-          </div>
-          <!-- Custom YouTube URL Adder -->
-          <form id="addVideoForm" class="flex items-center gap-2 w-full md:w-auto">
-            <input id="customVideoInput" type="url" placeholder="YouTube URL দিন (যেমন: https://youtu.be/...)" class="w-full md:w-72 px-3 py-2 text-xs bg-slate-800 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400" />
-            <button type="submit" class="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shrink-0 cursor-pointer">ভিডিও দেখুন</button>
-          </form>
+        <div class="mb-6">
+          <span id="videoEyebrow" class="text-xs font-bold uppercase tracking-wider text-amber-400">ভিডিও গ্যালারি ও এক্সপ্লেনার</span>
+          <h2 id="videoTitle" class="text-2xl sm:text-3xl font-extrabold mt-1">যুবশক্তি প্রকল্পের ভিডিও আপডেট ও বিশ্লেষণ</h2>
+          <p id="videoDesc" class="text-sm text-slate-300 mt-1">সহজ ভাষায় যাচাইকৃত সংবাদ ও বিশ্লেষণমূলক ভিডিও দেখুন।</p>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-6 items-start">
@@ -1532,7 +1525,7 @@
         newsDesc: isBn ? 'যেকোনো কার্ডে “বিস্তারিত পড়ুন” ক্লিক করে পুরো ব্লগ আর্টিকেল ও মূল সূত্র দেখুন।' : 'Click any card to open the full blog details page with takeaways and verified sources.',
         videoEyebrow: isBn ? 'ভিডিও গ্যালারি ও এক্সপ্লেনার' : 'Video Updates & Explainers',
         videoTitle: isBn ? 'যুবশক্তি প্রকল্পের ভিডিও আপডেট ও বিশ্লেষণ' : 'Yubashakti Video Updates & Guides',
-        videoDesc: isBn ? 'সহজ ভাষায় ভিডিও দেখুন অথবা নিজের পছন্দের YouTube ভিডিও লিঙ্ক যোগ করে প্লে করুন।' : 'Watch video explainers or paste any YouTube link to preview it right here.',
+        videoDesc: isBn ? 'সহজ ভাষায় যাচাইকৃত সংবাদ ও বিশ্লেষণমূলক ভিডিও দেখুন।' : 'Watch verified news reports and explainer videos.',
         timelineEyebrow: isBn ? 'রোলআউট সূচি' : 'Rollout Schedule',
         timelineTitle: isBn ? 'সরকারি রোডম্যাপ ও গুরুত্বপূর্ণ তারিখ' : 'Official Roadmap & Key Dates',
         chartTitle: isBn ? 'ভাতা বৃদ্ধির তুলনামূলক চার্ট' : 'Allowance Progression Chart',
@@ -1603,9 +1596,6 @@
 
       const searchInput = document.getElementById('newsSearchInput');
       if (searchInput) searchInput.placeholder = isBn ? 'খবর খুঁজুন (যেমন: নবান্ন, ক্যাম্প, ভাতা)...' : 'Search news (e.g. Nabanna, camp)...';
-
-      const customVidInput = document.getElementById('customVideoInput');
-      if (customVidInput) customVidInput.placeholder = isBn ? 'YouTube URL দিন (যেমন: https://youtu.be/...)' : 'Paste YouTube URL (e.g. https://youtu.be/...)';
 
       const fieldLabels = {
         residency: isBn ? 'পশ্চিমবঙ্গের স্থায়ী বাসিন্দা?' : 'Permanent Resident of West Bengal?',
@@ -1968,24 +1958,11 @@
         renderPlaylist();
       });
 
-      // Video playlist & custom URL
+      // Video playlist
       document.getElementById('videoPlaylist').addEventListener('click', (e) => {
         const btn = e.target.closest('.video-pick-btn');
         if (!btn) return;
         selectVideo(btn.getAttribute('data-video-id'));
-      });
-
-      document.getElementById('addVideoForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const input = document.getElementById('customVideoInput');
-        const vid = extractYouTubeId(input.value.trim());
-        if (!vid) {
-          showToast(state.lang === 'bn' ? 'সঠিক YouTube লিঙ্ক দিন!' : 'Please enter a valid YouTube URL!');
-          return;
-        }
-        selectVideo(vid, state.lang === 'bn' ? 'আপনার যোগ করা ভিডিও' : 'Custom Video Update');
-        input.value = '';
-        showToast(state.lang === 'bn' ? 'ভিডিও লোড হয়েছে!' : 'Video loaded!');
       });
 
       // Chart toggle
