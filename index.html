@@ -387,8 +387,8 @@
             <div class="flex flex-wrap items-center justify-between gap-2">
               <h3 id="playlistHeading" class="text-xs font-bold uppercase tracking-wider text-slate-400">প্লেলিস্ট (ভাষা অনুযায়ী)</h3>
               <div id="videoLangTabs" class="inline-flex rounded-lg bg-slate-800 p-0.5 text-[11px] font-bold">
-                <button type="button" data-vlang="all" class="vlang-btn px-2.5 py-1 rounded-md bg-amber-500 text-slate-950 cursor-pointer">সব (8)</button>
-                <button type="button" data-vlang="bn" class="vlang-btn px-2.5 py-1 rounded-md text-slate-300 hover:text-white cursor-pointer">বাংলা (5)</button>
+                <button type="button" data-vlang="all" class="vlang-btn px-2.5 py-1 rounded-md bg-amber-500 text-slate-950 cursor-pointer">সব (13)</button>
+                <button type="button" data-vlang="bn" class="vlang-btn px-2.5 py-1 rounded-md text-slate-300 hover:text-white cursor-pointer">বাংলা (10)</button>
                 <button type="button" data-vlang="hi" class="vlang-btn px-2.5 py-1 rounded-md text-slate-300 hover:text-white cursor-pointer">हिन्दी (3)</button>
               </div>
             </div>
@@ -987,6 +987,56 @@
         titleEn: 'Suvendu Adhikari on Yuvasathi Scheme Camp 2026'
       },
       {
+        id: 'ul7nivgwTqw',
+        vlang: 'bn',
+        channel: 'ABP ANANDA',
+        date: '22 Jun 2026',
+        tagBn: 'বাংলা • বাজেট ও ভরসা',
+        tagEn: 'Bangla • Budget Briefing',
+        titleBn: 'ভরসা কর্মসূচি চালু হবে, মাসে গ্র্যাজুয়েটদের ₹৩,০০০ টাকা ভাতা: অর্থমন্ত্রী',
+        titleEn: 'WB Budget 2026: Bhorsha Karmasuchi ₹3,000 Monthly Allowance Announcement'
+      },
+      {
+        id: '5FJJgt_npl0',
+        vlang: 'bn',
+        channel: 'ABP ANANDA',
+        date: 'Feb 2026',
+        tagBn: 'বাংলা • যুব সাথী (ABP)',
+        tagEn: 'Bangla • Yuva Sathi (ABP)',
+        titleBn: 'বাংলার যুব সাথী প্রকল্প: বেকারদের মাসে ₹১,৫০০ টাকা ভাতা (ABP Ananda)',
+        titleEn: 'Bengal Budget 2026: Banglar Yuva Sathi ₹1,500 Allowance Report'
+      },
+      {
+        id: 'IZKpMEqixJ4',
+        vlang: 'bn',
+        channel: 'Tothyo point',
+        date: '23 Nov 2026',
+        tagBn: 'বাংলা • ২৩ নভে ক্যাবিনেট',
+        tagEn: 'Bangla • 23 Nov Cabinet',
+        titleBn: 'যুবশক্তি প্রকল্প ২০২৬: মাসে ₹৩,০০০ ও ₹২,০০০! কারা পাবেন, কারা পাবেন না?',
+        titleEn: 'Yubashakti Scheme 2026: 23 Nov Cabinet Eligibility & Allowance Update'
+      },
+      {
+        id: 'Ls7rQ0iLahI',
+        vlang: 'bn',
+        channel: 'Exam Help Bangla',
+        date: 'Nov 2026',
+        tagBn: 'বাংলা • আবেদন গাইড',
+        tagEn: 'Bangla • Apply Guide',
+        titleBn: 'যুব শক্তি ভরসা কর্মসূচি ২০২৬: নতুন আপডেট ও আবেদনের প্রক্রিয়া',
+        titleEn: 'Yuba Shakti Bhorsha Karmasuchi 2026: New Update & Apply Process'
+      },
+      {
+        id: 'Xn6HqyolgDI',
+        vlang: 'bn',
+        channel: 'Mobile Tips by Raies',
+        date: 'Nov 2026',
+        tagBn: 'বাংলা • ₹২,০০০/₹১,৫০০ আপডেট',
+        tagEn: 'Bangla • ₹2,000/₹1,500 Update',
+        titleBn: 'ভরসা প্রকল্প ২০২৬ ও যুব সাথী নতুন আপডেট: মাসে ₹২,০০০/₹১,৫০০ টাকা ঘোষণা',
+        titleEn: 'Bharosa Scheme 2026 & Yuva Sathi Update: ₹2,000/₹1,500 Monthly Allowance'
+      },
+      {
         id: 'cIvVhA6EZvE',
         vlang: 'hi',
         channel: 'सरकारी योजनाएं भारत की',
@@ -1518,11 +1568,13 @@
       const u1 = document.getElementById('kpiUnit1'); if (u1) u1.textContent = isBn ? '/ মাস' : '/ mo';
       const u2 = document.getElementById('kpiUnit2'); if (u2) u2.textContent = isBn ? '/ মাস' : '/ mo';
       const u3 = document.getElementById('kpiUnit3'); if (u3) u3.textContent = isBn ? 'বছর' : 'Years';
+      const bnCount = VIDEOS.filter((v) => v.vlang === 'bn').length;
+      const hiCount = VIDEOS.filter((v) => v.vlang === 'hi').length;
       document.querySelectorAll('.vlang-btn').forEach((b) => {
         const k = b.getAttribute('data-vlang');
-        if (k === 'all') b.textContent = isBn ? 'সব (8)' : 'All (6)';
-        if (k === 'bn') b.textContent = isBn ? 'বাংলা (5)' : 'Bangla (4)';
-        if (k === 'hi') b.textContent = isBn ? 'হিন্দি (3)' : 'Hindi (3)';
+        if (k === 'all') b.textContent = isBn ? `সব (${VIDEOS.length})` : `All (${VIDEOS.length})`;
+        if (k === 'bn') b.textContent = isBn ? `বাংলা (${bnCount})` : `Bangla (${bnCount})`;
+        if (k === 'hi') b.textContent = isBn ? `হিন্দি (${hiCount})` : `Hindi (${hiCount})`;
       });
       const navMap = {
         news: isBn ? 'খবর ও ব্লগ' : 'News & Blog',
