@@ -76,8 +76,58 @@
     <section class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm mb-6">
       <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-50 text-orange-800 border border-orange-200 mb-2">Official .gov.in Recruitment Links</span>
       <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">পশ্চিমবঙ্গের ২৩ জেলার সরকারি চাকরির বিজ্ঞপ্তি (District Jobs)</h1>
-      <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-5">প্রতিটি জেলার DM Office, CMOH (স্বাস্থ্য দপ্তর), এবং BDO অফিসের আসল সরকারি নিয়োগ বিজ্ঞপ্তি দেখতে নিচ থেকে আপনার জেলা বেছে নিন।</p>
+      <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-5">প্রতিটি জেলার DM Office, CMOH (স্বাস্থ্য দপ্তর), এবং BDO অফিসের আসল সরকারি নিয়োগ বিজ্ঞপ্তি দেখতে নিচ থেকে আপনার জেলা বা বিভাগ বেছে নিন।</p>
       <input id="jobDistSearch" type="search" placeholder="জেলার নাম খুঁজুন (যেমন: Bankura, Murshidabad, হুগলি)..." class="w-full sm:w-96 px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-600" />
+    </section>
+
+    <!-- Topic-Wise WB Recruitment Categories -->
+    <section class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm mb-6">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <h2 class="text-base sm:text-lg font-extrabold text-slate-900">বিভাগ অনুযায়ী নিয়োগ আপডেট (Topic-Wise WB Jobs)</h2>
+        <span class="text-[11px] font-semibold text-slate-500">Last checked: 25 Nov 2026 • Official Sources Only</span>
+      </div>
+      <div class="divide-y divide-slate-200 border border-slate-200 rounded-xl overflow-hidden">
+        <a href="https://www.wbhealth.gov.in/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-3.5 bg-white hover:bg-orange-50 transition-colors">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-orange-600 shrink-0"></span>
+            <div>
+              <p class="text-sm sm:text-base font-bold text-slate-900">আশা কর্মী নিয়োগ (ASHA Worker)</p>
+              <p class="text-xs text-slate-500">WB Health (wbhealth.gov.in) ও জেলার CMOH/SDO বিজ্ঞপ্তি</p>
+            </div>
+          </div>
+          <span class="text-orange-700 font-extrabold text-sm shrink-0">&rsaquo;</span>
+        </a>
+        <a href="#jobsGrid" class="flex items-center justify-between gap-3 px-4 py-3.5 bg-white hover:bg-orange-50 transition-colors">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-orange-600 shrink-0"></span>
+            <div>
+              <p class="text-sm sm:text-base font-bold text-slate-900">আইসিডিএস অঙ্গনওয়াড়ি নিয়োগ (ICDS Anganwadi)</p>
+              <p class="text-xs text-slate-500">নিচের ২৩ জেলার অফিশিয়াল DPO ICDS / DM পোর্টাল দেখুন</p>
+            </div>
+          </div>
+          <span class="text-orange-700 font-extrabold text-sm shrink-0">&rsaquo;</span>
+        </a>
+        <a href="https://wbpolice.gov.in/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-3.5 bg-white hover:bg-orange-50 transition-colors">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-orange-600 shrink-0"></span>
+            <div>
+              <p class="text-sm sm:text-base font-bold text-slate-900">সিভিক ভলেন্টিয়ার ও পুলিশ নিয়োগ (WB Police / PRB)</p>
+              <p class="text-xs text-slate-500">wbpolice.gov.in ও prb.wb.gov.in অফিসিয়াল নোটিশ</p>
+            </div>
+          </div>
+          <span class="text-orange-700 font-extrabold text-sm shrink-0">&rsaquo;</span>
+        </a>
+        <a href="#jobsGrid" class="flex items-center justify-between gap-3 px-4 py-3.5 bg-white hover:bg-orange-50 transition-colors">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-orange-600 shrink-0"></span>
+            <div>
+              <p class="text-sm sm:text-base font-bold text-slate-900">গ্রাম পঞ্চায়েতে নিয়োগ (Gram Panchayat / DLSC)</p>
+              <p class="text-xs text-slate-500">নিচের ২৩ জেলার অফিশিয়াল DLSC / BDO রিক্রুটমেন্ট পোর্টাল</p>
+            </div>
+          </div>
+          <span class="text-orange-700 font-extrabold text-sm shrink-0">&rsaquo;</span>
+        </a>
+      </div>
     </section>
 
     <section id="jobsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></section>
